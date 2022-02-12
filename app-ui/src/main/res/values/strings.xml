@@ -2,6 +2,12 @@
     <string name="app_name">App-UI</string>
     <string name="refresh_btn">Refresh</string>
     <string name="weather_location_title_label">%1$s Weather</string>
-    <string name="temperature_label">%.2f ℃</string>
-    <string name="wind_label">%.2f m/s Wind</string>
+    <string name="temperature_C_label">%.2f ℃</string>
+    <string name="temperature_F_label">%.2f ℉</string>
+    <string name="wind_ms_label">%.2f m/s Wind</string>
+    <string name="wind_knots_label">%.2f knots Wind</string>
+    <string name="to_temp_c">Convert Temp to ℃</string>
+    <string name="to_temp_f">Convert Temp to ℉</string>
+    <string name="wind_to_knots">Convert Wind to knots</string>
+    <string name="wind_to_meter_per_sec">Convert Wind to m/s</string>
 </resources>
