@@ -23,7 +23,11 @@ fun WeatherDetailsScreen(
     temperature: Double,
     windSpeed: Double,
     description: String,
-    onRefreshClicked: () -> Unit
+    onRefreshClicked: () -> Unit,
+    isUnitTypeMetric: Boolean = true,
+    isWindInMs: Boolean = true,
+    onConvertTempClicked: (Boolean) -> Unit,
+    onConvertWindClicked: (Boolean) -> Unit
 ) {
     AndroidInterviewTheme {
         Surface(
@@ -51,13 +55,21 @@ fun WeatherDetailsScreen(
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
                         Text(
-                            text = stringResource(R.string.temperature_label, temperature),
+                            text = if (isUnitTypeMetric) {
+                                stringResource(R.string.temperature_C_label, temperature)
+                            } else {
+                                stringResource(R.string.temperature_F_label, temperature)
+                            },
                             modifier = Modifier.padding(top = 5.dp),
                             fontWeight = FontWeight.SemiBold,
                             fontSize = 30.sp,
                         )
                         Text(
-                            text = stringResource(R.string.wind_label, windSpeed),
+                            text = if (isWindInMs) {
+                                stringResource(R.string.wind_ms_label, windSpeed)
+                            } else {
+                                stringResource(R.string.wind_knots_label, windSpeed)
+                            },
                             modifier = Modifier.padding(top = 2.dp),
                             fontSize = 18.sp,
                         )
@@ -80,6 +92,39 @@ fun WeatherDetailsScreen(
                         fontSize = 18.sp
                     )
                 }
+
+                Button(
+                    onClick = { onConvertTempClicked(isUnitTypeMetric.not()) },
+                    modifier = Modifier
+                        .padding(top = 5.dp)
+                ) {
+                    val text = if (isUnitTypeMetric) {
+                        stringResource(id = R.string.to_temp_f)
+                    } else {
+                        stringResource(id = R.string.to_temp_c)
+                    }
+                    Text(
+                        text = text,
+                        fontWeight = FontWeight.W500,
+                        fontSize = 18.sp
+                    )
+                }
+                Button(
+                    onClick = { onConvertWindClicked(isWindInMs) },
+                    modifier = Modifier
+                        .padding(top = 5.dp)
+                ) {
+                    val text = if (isWindInMs) {
+                        stringResource(id = R.string.wind_to_knots)
+                    } else {
+                        stringResource(id = R.string.wind_to_meter_per_sec)
+                    }
+                    Text(
+                        text = text,
+                        fontWeight = FontWeight.W500,
+                        fontSize = 18.sp
+                    )
+                }
             }
         }
     }
@@ -94,7 +139,11 @@ fun WeatherDetailsScreenPreview() {
             windSpeed = 2.57,
             description = "Sunny",
             locationName = "Sydney",
-            onRefreshClicked = { }
+            onRefreshClicked = { },
+            isUnitTypeMetric = true,
+            isWindInMs = true,
+            onConvertTempClicked = {},
+            onConvertWindClicked = {}
         )
     }
 }

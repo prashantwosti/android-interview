@@ -15,10 +15,23 @@
         <entry key="../../../../../layout/compose-model-1643087543830.xml" value="0.28842905405405406" />
         <entry key="../../../../../layout/compose-model-1643089055338.xml" value="0.28842905405405406" />
         <entry key="../../../../../layout/compose-model-1643089606411.xml" value="0.20092592592592592" />
+        <entry key="../../../../layout/compose-model-1644582620501.xml" value="0.2324074074074074" />
+        <entry key="../../../../layout/compose-model-1644584131639.xml" value="0.21410472972972974" />
+        <entry key="../../../../layout/compose-model-1644593927467.xml" value="0.14074074074074075" />
+        <entry key="../../../../layout/compose-model-1644624707999.xml" value="0.1" />
+        <entry key="../../../../layout/compose-model-1644629555958.xml" value="0.335" />
+        <entry key="../../../../layout/compose-model-1644632142206.xml" value="0.21410472972972974" />
+        <entry key="../../../../layout/compose-model-1644646990526.xml" value="0.1" />
+        <entry key="../../../../layout/compose-model-1644647122658.xml" value="0.1" />
+        <entry key="../../../../layout/compose-model-1644647825699.xml" value="0.15833333333333333" />
+        <entry key="../../../../layout/compose-model-1644649211235.xml" value="0.12119932432432433" />
+        <entry key="../../../../layout/compose-model-1644669285780.xml" value="0.21410472972972974" />
+        <entry key="../../../../layout/compose-model-1644706304545.xml" value="0.3138888888888889" />
         <entry key="data/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.159" />
       </map>
     </option>
   </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
